@@ -42,9 +42,21 @@ title:  Rust Users &middot; The Rust Programming Language
 	<div class="row user-details-row user-details-row-{{forloop.index}}"
 	     style="opacity: 0;"
 	     id="user-details-{{offset}}-{{forloop.index}}">
-	  <div class="col-md-12">
+	  {% if forloop.index >= 2 %}
+	  <div class="col-md-4"></div>
+	  {% endif %}
+	  {% if forloop.index == 3 %}
+	  <div class="col-md-4"></div>
+	  {% endif %}
+	  <div class="col-md-4">
 	    <p><em>{{user.name}}</em> : {{user.how}}</p>
 	  </div>
+	  {% if forloop.index == 1 %}
+	  <div class="col-md-4"></div>
+	  {% endif %}
+	  {% if forloop.index <= 2 %}
+	  <div class="col-md-4"></div>
+	  {% endif %}
 	</div>
 
 	<script type="text/javascript">
