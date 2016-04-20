@@ -32,25 +32,16 @@ title:  Rust Users &middot; The Rust Programming Language
               <img src="user-logos/{{user.logo}}">
             </a>
           </div>
+            <div class="details user-detail" style="opacity: 0;"
+              id="user-details-{{offset}}-{{forloop.index}}">
+              <p><em>{{user.name}}</em> : {{user.how}}</p>
+            </div>
         </div>
-      {% endfor %}
-    </div>
-
-    <div class="details">
-
-      {% for user in site.data.users limit:3 offset:offset %}
-	<div class="row user-details-row user-details-row-{{forloop.index}}"
-	     style="opacity: 0;"
-	     id="user-details-{{offset}}-{{forloop.index}}">
-	  <div class="col-md-12">
-	    <p><em>{{user.name}}</em> : {{user.how}}</p>
-	  </div>
-	</div>
 
 	<script type="text/javascript">
 	  var logo = document.getElementById("user-logo-{{offset}}-{{forloop.index}}");
 	  logo.onmouseover = function() {
-	    var allDetails = document.querySelectorAll(".user-details-row");
+	    var allDetails = document.querySelectorAll(".user-detail");
 	    for (var i = 0; i < allDetails.length; i++) {
 	      var details = allDetails[i];
               details.className = details.className.replace(" fade-in", "");
@@ -66,11 +57,11 @@ title:  Rust Users &middot; The Rust Programming Language
 	    details.setAttribute("style", "opacity: 1;");
 	  };
 	</script>
+      {% endfor %}
 
       {% endfor %}
 
     </div>
 
-  {% endfor %}
 
 </div>

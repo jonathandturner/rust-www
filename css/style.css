@@ -517,6 +517,10 @@ ul.laundry-list {
     line-height: 100px;
 }
 
+#users .user-details {
+	height: 100px;
+}
+
 #users img {
     max-width: 200px;
     max-height: 100px;
@@ -524,9 +528,7 @@ ul.laundry-list {
 }
 
 #users .details {
-    height: 2em;
     margin: 2em;
-    padding-top: 4px;
 }
 
 #users .fade-in {
@@ -562,7 +564,6 @@ ul.laundry-list {
 
 #users .details p {
     margin: 0px;
-    text-decoration: underline gray;
 }
 
 #users em {
