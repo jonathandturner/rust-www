@@ -547,20 +547,17 @@ ul.laundry-list {
 
 #users .user-details-row-1 div {
     height: 2em;
-    margin-top: 0em;
 }
 
 #users .user-details-row-2 div {
     height: 2em;
-    margin-top: -2em;
 }
 
 #users .user-details-row-3 div {
     height: 2em;
-    margin-top: -2em;
 }
 
-#users .details p {
+#users .user-details-row p {
     margin: 0px;
     text-decoration: underline gray;
 }
